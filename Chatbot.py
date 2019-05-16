@@ -53,4 +53,12 @@ for line in conv:
 		convObj['lines'].append(lines[lineID])
 	conversations.append(convObj)
 
-print(conversations[0])
+# Set of pair of Questions and Answers
+qa_pairs = []
+for conversation in conversations:
+	for i in range(len(conversation['lines'])-1):
+		inputline = conversation['lines'][i]['text'].strip()
+		outputline = conversation['lines'][i+1]['text'].strip()
+		if inputline and outputline:
+			qa_pairs.append([inputline, outputline])
+print(qa_pairs[0])
