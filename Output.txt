@@ -1,0 +1,1142 @@
+Microsoft Windows [Version 10.0.17134.765]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+E:\GitHub\PyTorch-ChatBot>python36 ChatAssistant.py
+b'L1045 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ They do not!\n'
+b'L1044 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ They do to!\n'
+b'L985 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ I hope so.\n'
+b'L984 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ She okay?\n'
+b"L925 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ Let's go.\n"
+b'L924 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ Wow\n'
+b"L872 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ Okay -- you're gonna need to learn how to lie.\n"
+b'L871 +++$+++ u2 +++$+++ m0 +++$+++ CAMERON +++$+++ No\n'
+b'L870 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ I\'m kidding.  You know how sometimes you just become this "persona"?  And you don\'t know how to quit?\n'
+b'L869 +++$+++ u0 +++$+++ m0 +++$+++ BIANCA +++$+++ Like my fear of wearing pastels?\n'
+
+Processing corpus...
+
+Loading conversations...
+
+Writing newly formatted file...
+
+Sample lines from file:
+b"Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again.\tWell, I thought we'd start with pronunciation, if that's okay with you.\r\n"
+b"Well, I thought we'd start with pronunciation, if that's okay with you.\tNot the hacking and gagging and spitting part.  Please.\r\n"
+b"Not the hacking and gagging and spitting part.  Please.\tOkay... then how 'bout we try out some French cuisine.  Saturday?  Night?\r\n"
+b"You're asking me out.  That's so cute. What's your name again?\tForget it.\r\n"
+b"No, no, it's my fault -- we didn't have a proper introduction ---\tCameron.\r\n"
+b"Cameron.\tThe thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does.\r\n"
+b"The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does.\tSeems like she could get a date easy enough...\r\n"
+b'Why?\tUnsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.\r\n'
+b"Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.\tThat's a shame.\r\n"
+b'Gosh, if only we could find Kat a boyfriend...\tLet me see what I can do.\r\n'
+Start preparing training data ...
+Reading lines...
+Read 221282 sentence pairs
+Trimmed to 64271 sentence pairs
+Counting words...
+Counted words: 18008
+
+pairs:
+['there .', 'where ?']
+['you have my word . as a gentleman', 'you re sweet .']
+['hi .', 'looks like things worked out tonight huh ?']
+['you know chastity ?', 'i believe we share an art instructor']
+['have fun tonight ?', 'tons']
+['well no . . .', 'then that s all you had to say .']
+['then that s all you had to say .', 'but']
+['but', 'you always been this selfish ?']
+['do you listen to this crap ?', 'what crap ?']
+['what good stuff ?', 'the real you .']
+keep_words 7823 / 18005 = 0.4345
+Trimmed from 64271 pairs to 53165, 0.8272 of total
+input_variable: tensor([[  88,   25,   92,    7,   61],
+        [  66,  410,   27,  505,   37],
+        [  36,   67,  509,  829,  274],
+        [  37,  213,  722,  594,    4],
+        [  12,  441,   45,    4,    2],
+        [1014,   53, 1011,    4,    0],
+        [3226, 6624,    6,    2,    0],
+        [1014,    4,    2,    0,    0],
+        [  66,    2,    0,    0,    0],
+        [   2,    0,    0,    0,    0]])
+lengths: tensor([10,  9,  8,  7,  5])
+target_variable: tensor([[  60,   27,   47,   25,    5],
+        [ 479,    8,    7, 1014,  115],
+        [  40,   40,    8,  387,   61],
+        [  53,  158,  350, 1014,    6],
+        [2013,   21,  217, 4162,    2],
+        [1556,   56,    6,  594,    0],
+        [   4,  159,    2,    4,    0],
+        [   2, 6338,    0,    4,    0],
+        [   0,    4,    0,    4,    0],
+        [   0,    2,    0,    2,    0]])
+mask: tensor([[1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 0],
+        [1, 1, 1, 1, 0],
+        [1, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0]], dtype=torch.uint8)
+max_target_len: 10
+Building encoder and decoder ...
+Models built and ready to go!
+Building optimizers ...
+Starting Training!
+Initializing ...
+Training...
+Iteration: 1; Percent complete: 0.1%; Average loss: 8.9605
+Iteration: 2; Percent complete: 0.2%; Average loss: 8.8426
+Iteration: 3; Percent complete: 0.3%; Average loss: 8.6620
+Iteration: 4; Percent complete: 0.4%; Average loss: 8.2989
+Iteration: 5; Percent complete: 0.5%; Average loss: 7.8384
+Iteration: 6; Percent complete: 0.6%; Average loss: 7.3396
+Iteration: 7; Percent complete: 0.7%; Average loss: 6.8504
+Iteration: 8; Percent complete: 0.8%; Average loss: 6.9395
+Iteration: 9; Percent complete: 0.9%; Average loss: 6.7633
+Iteration: 10; Percent complete: 1.0%; Average loss: 6.4707
+Iteration: 11; Percent complete: 1.1%; Average loss: 6.2582
+Iteration: 12; Percent complete: 1.2%; Average loss: 5.6564
+Iteration: 13; Percent complete: 1.3%; Average loss: 5.5159
+Iteration: 14; Percent complete: 1.4%; Average loss: 5.4317
+Iteration: 15; Percent complete: 1.5%; Average loss: 5.3250
+Iteration: 16; Percent complete: 1.6%; Average loss: 5.4056
+Iteration: 17; Percent complete: 1.7%; Average loss: 5.2015
+Iteration: 18; Percent complete: 1.8%; Average loss: 5.0458
+Iteration: 19; Percent complete: 1.9%; Average loss: 5.0626
+Iteration: 20; Percent complete: 2.0%; Average loss: 4.7688
+Iteration: 21; Percent complete: 2.1%; Average loss: 4.9344
+Iteration: 22; Percent complete: 2.2%; Average loss: 4.7603
+Iteration: 23; Percent complete: 2.3%; Average loss: 4.8802
+Iteration: 24; Percent complete: 2.4%; Average loss: 5.0051
+Iteration: 25; Percent complete: 2.5%; Average loss: 4.5040
+Iteration: 26; Percent complete: 2.6%; Average loss: 4.8516
+Iteration: 27; Percent complete: 2.7%; Average loss: 4.6649
+Iteration: 28; Percent complete: 2.8%; Average loss: 4.7846
+Iteration: 29; Percent complete: 2.9%; Average loss: 4.6599
+Iteration: 30; Percent complete: 3.0%; Average loss: 4.6321
+Iteration: 31; Percent complete: 3.1%; Average loss: 4.7547
+Iteration: 32; Percent complete: 3.2%; Average loss: 4.8945
+Iteration: 33; Percent complete: 3.3%; Average loss: 4.9727
+Iteration: 34; Percent complete: 3.4%; Average loss: 4.8791
+Iteration: 35; Percent complete: 3.5%; Average loss: 4.7674
+Iteration: 36; Percent complete: 3.6%; Average loss: 4.7603
+Iteration: 37; Percent complete: 3.7%; Average loss: 4.6530
+Iteration: 38; Percent complete: 3.8%; Average loss: 4.8730
+Iteration: 39; Percent complete: 3.9%; Average loss: 4.6610
+Iteration: 40; Percent complete: 4.0%; Average loss: 4.6264
+Iteration: 41; Percent complete: 4.1%; Average loss: 4.6899
+Iteration: 42; Percent complete: 4.2%; Average loss: 4.6998
+Iteration: 43; Percent complete: 4.3%; Average loss: 4.8498
+Iteration: 44; Percent complete: 4.4%; Average loss: 4.8715
+Iteration: 45; Percent complete: 4.5%; Average loss: 4.7124
+Iteration: 46; Percent complete: 4.6%; Average loss: 4.6898
+Iteration: 47; Percent complete: 4.7%; Average loss: 4.7275
+Iteration: 48; Percent complete: 4.8%; Average loss: 4.4349
+Iteration: 49; Percent complete: 4.9%; Average loss: 4.5950
+Iteration: 50; Percent complete: 5.0%; Average loss: 4.6850
+Iteration: 51; Percent complete: 5.1%; Average loss: 4.7024
+Iteration: 52; Percent complete: 5.2%; Average loss: 4.6298
+Iteration: 53; Percent complete: 5.3%; Average loss: 4.3519
+Iteration: 54; Percent complete: 5.4%; Average loss: 4.6648
+Iteration: 55; Percent complete: 5.5%; Average loss: 4.5626
+Iteration: 56; Percent complete: 5.6%; Average loss: 4.6895
+Iteration: 57; Percent complete: 5.7%; Average loss: 4.6553
+Iteration: 58; Percent complete: 5.8%; Average loss: 4.5951
+Iteration: 59; Percent complete: 5.9%; Average loss: 4.7463
+Iteration: 60; Percent complete: 6.0%; Average loss: 4.5994
+Iteration: 61; Percent complete: 6.1%; Average loss: 4.6178
+Iteration: 62; Percent complete: 6.2%; Average loss: 4.6100
+Iteration: 63; Percent complete: 6.3%; Average loss: 4.6602
+Iteration: 64; Percent complete: 6.4%; Average loss: 4.6115
+Iteration: 65; Percent complete: 6.5%; Average loss: 4.6745
+Iteration: 66; Percent complete: 6.6%; Average loss: 4.4760
+Iteration: 67; Percent complete: 6.7%; Average loss: 4.4324
+Iteration: 68; Percent complete: 6.8%; Average loss: 4.7065
+Iteration: 69; Percent complete: 6.9%; Average loss: 4.5286
+Iteration: 70; Percent complete: 7.0%; Average loss: 4.6413
+Iteration: 71; Percent complete: 7.1%; Average loss: 4.2930
+Iteration: 72; Percent complete: 7.2%; Average loss: 4.3514
+Iteration: 73; Percent complete: 7.3%; Average loss: 4.4550
+Iteration: 74; Percent complete: 7.4%; Average loss: 4.5882
+Iteration: 75; Percent complete: 7.5%; Average loss: 4.4449
+Iteration: 76; Percent complete: 7.6%; Average loss: 4.4057
+Iteration: 77; Percent complete: 7.7%; Average loss: 4.4275
+Iteration: 78; Percent complete: 7.8%; Average loss: 4.3943
+Iteration: 79; Percent complete: 7.9%; Average loss: 4.4761
+Iteration: 80; Percent complete: 8.0%; Average loss: 4.8039
+Iteration: 81; Percent complete: 8.1%; Average loss: 4.3994
+Iteration: 82; Percent complete: 8.2%; Average loss: 4.3815
+Iteration: 83; Percent complete: 8.3%; Average loss: 4.4156
+Iteration: 84; Percent complete: 8.4%; Average loss: 4.6995
+Iteration: 85; Percent complete: 8.5%; Average loss: 4.1874
+Iteration: 86; Percent complete: 8.6%; Average loss: 4.7035
+Iteration: 87; Percent complete: 8.7%; Average loss: 4.3659
+Iteration: 88; Percent complete: 8.8%; Average loss: 4.5718
+Iteration: 89; Percent complete: 8.9%; Average loss: 4.3056
+Iteration: 90; Percent complete: 9.0%; Average loss: 4.7147
+Iteration: 91; Percent complete: 9.1%; Average loss: 4.2763
+Iteration: 92; Percent complete: 9.2%; Average loss: 4.5841
+Iteration: 93; Percent complete: 9.3%; Average loss: 4.5312
+Iteration: 94; Percent complete: 9.4%; Average loss: 4.4594
+Iteration: 95; Percent complete: 9.5%; Average loss: 4.3694
+Iteration: 96; Percent complete: 9.6%; Average loss: 4.1674
+Iteration: 97; Percent complete: 9.7%; Average loss: 4.4612
+Iteration: 98; Percent complete: 9.8%; Average loss: 4.2973
+Iteration: 99; Percent complete: 9.9%; Average loss: 4.4771
+Iteration: 100; Percent complete: 10.0%; Average loss: 4.4498
+Iteration: 101; Percent complete: 10.1%; Average loss: 4.5821
+Iteration: 102; Percent complete: 10.2%; Average loss: 4.1561
+Iteration: 103; Percent complete: 10.3%; Average loss: 4.4493
+Iteration: 104; Percent complete: 10.4%; Average loss: 4.3307
+Iteration: 105; Percent complete: 10.5%; Average loss: 4.5900
+Iteration: 106; Percent complete: 10.6%; Average loss: 4.2817
+Iteration: 107; Percent complete: 10.7%; Average loss: 4.6000
+Iteration: 108; Percent complete: 10.8%; Average loss: 4.1966
+Iteration: 109; Percent complete: 10.9%; Average loss: 4.5610
+Iteration: 110; Percent complete: 11.0%; Average loss: 4.3133
+Iteration: 111; Percent complete: 11.1%; Average loss: 4.4012
+Iteration: 112; Percent complete: 11.2%; Average loss: 4.5630
+Iteration: 113; Percent complete: 11.3%; Average loss: 4.3075
+Iteration: 114; Percent complete: 11.4%; Average loss: 4.3923
+Iteration: 115; Percent complete: 11.5%; Average loss: 4.4102
+Iteration: 116; Percent complete: 11.6%; Average loss: 4.6105
+Iteration: 117; Percent complete: 11.7%; Average loss: 4.4253
+Iteration: 118; Percent complete: 11.8%; Average loss: 4.4223
+Iteration: 119; Percent complete: 11.9%; Average loss: 4.3811
+Iteration: 120; Percent complete: 12.0%; Average loss: 4.3970
+Iteration: 121; Percent complete: 12.1%; Average loss: 4.2280
+Iteration: 122; Percent complete: 12.2%; Average loss: 4.0789
+Iteration: 123; Percent complete: 12.3%; Average loss: 4.0632
+Iteration: 124; Percent complete: 12.4%; Average loss: 4.5313
+Iteration: 125; Percent complete: 12.5%; Average loss: 4.2163
+Iteration: 126; Percent complete: 12.6%; Average loss: 4.2969
+Iteration: 127; Percent complete: 12.7%; Average loss: 4.2951
+Iteration: 128; Percent complete: 12.8%; Average loss: 4.4486
+Iteration: 129; Percent complete: 12.9%; Average loss: 4.1864
+Iteration: 130; Percent complete: 13.0%; Average loss: 4.2545
+Iteration: 131; Percent complete: 13.1%; Average loss: 4.3823
+Iteration: 132; Percent complete: 13.2%; Average loss: 4.4244
+Iteration: 133; Percent complete: 13.3%; Average loss: 4.2537
+Iteration: 134; Percent complete: 13.4%; Average loss: 4.2868
+Iteration: 135; Percent complete: 13.5%; Average loss: 4.2353
+Iteration: 136; Percent complete: 13.6%; Average loss: 4.2147
+Iteration: 137; Percent complete: 13.7%; Average loss: 4.2113
+Iteration: 138; Percent complete: 13.8%; Average loss: 4.4206
+Iteration: 139; Percent complete: 13.9%; Average loss: 4.1477
+Iteration: 140; Percent complete: 14.0%; Average loss: 4.2098
+Iteration: 141; Percent complete: 14.1%; Average loss: 4.3666
+Iteration: 142; Percent complete: 14.2%; Average loss: 4.0545
+Iteration: 143; Percent complete: 14.3%; Average loss: 4.0635
+Iteration: 144; Percent complete: 14.4%; Average loss: 4.3851
+Iteration: 145; Percent complete: 14.5%; Average loss: 4.3888
+Iteration: 146; Percent complete: 14.6%; Average loss: 4.1733
+Iteration: 147; Percent complete: 14.7%; Average loss: 4.1787
+Iteration: 148; Percent complete: 14.8%; Average loss: 3.9237
+Iteration: 149; Percent complete: 14.9%; Average loss: 4.2989
+Iteration: 150; Percent complete: 15.0%; Average loss: 4.2534
+Iteration: 151; Percent complete: 15.1%; Average loss: 4.1417
+Iteration: 152; Percent complete: 15.2%; Average loss: 3.9124
+Iteration: 153; Percent complete: 15.3%; Average loss: 4.0962
+Iteration: 154; Percent complete: 15.4%; Average loss: 4.2306
+Iteration: 155; Percent complete: 15.5%; Average loss: 4.0625
+Iteration: 156; Percent complete: 15.6%; Average loss: 4.2575
+Iteration: 157; Percent complete: 15.7%; Average loss: 4.3918
+Iteration: 158; Percent complete: 15.8%; Average loss: 4.0413
+Iteration: 159; Percent complete: 15.9%; Average loss: 4.1519
+Iteration: 160; Percent complete: 16.0%; Average loss: 4.2478
+Iteration: 161; Percent complete: 16.1%; Average loss: 4.0102
+Iteration: 162; Percent complete: 16.2%; Average loss: 4.5119
+Iteration: 163; Percent complete: 16.3%; Average loss: 4.3026
+Iteration: 164; Percent complete: 16.4%; Average loss: 4.2847
+Iteration: 165; Percent complete: 16.5%; Average loss: 3.9811
+Iteration: 166; Percent complete: 16.6%; Average loss: 4.1721
+Iteration: 167; Percent complete: 16.7%; Average loss: 4.3302
+Iteration: 168; Percent complete: 16.8%; Average loss: 4.1894
+Iteration: 169; Percent complete: 16.9%; Average loss: 4.0098
+Iteration: 170; Percent complete: 17.0%; Average loss: 4.0069
+Iteration: 171; Percent complete: 17.1%; Average loss: 4.1186
+Iteration: 172; Percent complete: 17.2%; Average loss: 4.3024
+Iteration: 173; Percent complete: 17.3%; Average loss: 4.2017
+Iteration: 174; Percent complete: 17.4%; Average loss: 4.1739
+Iteration: 175; Percent complete: 17.5%; Average loss: 4.2963
+Iteration: 176; Percent complete: 17.6%; Average loss: 4.0046
+Iteration: 177; Percent complete: 17.7%; Average loss: 3.9548
+Iteration: 178; Percent complete: 17.8%; Average loss: 4.1749
+Iteration: 179; Percent complete: 17.9%; Average loss: 4.2388
+Iteration: 180; Percent complete: 18.0%; Average loss: 4.1175
+Iteration: 181; Percent complete: 18.1%; Average loss: 3.7976
+Iteration: 182; Percent complete: 18.2%; Average loss: 4.2145
+Iteration: 183; Percent complete: 18.3%; Average loss: 4.1796
+Iteration: 184; Percent complete: 18.4%; Average loss: 4.3700
+Iteration: 185; Percent complete: 18.5%; Average loss: 4.0695
+Iteration: 186; Percent complete: 18.6%; Average loss: 4.1544
+Iteration: 187; Percent complete: 18.7%; Average loss: 4.0283
+Iteration: 188; Percent complete: 18.8%; Average loss: 3.9001
+Iteration: 189; Percent complete: 18.9%; Average loss: 4.0376
+Iteration: 190; Percent complete: 19.0%; Average loss: 4.1885
+Iteration: 191; Percent complete: 19.1%; Average loss: 3.9937
+Iteration: 192; Percent complete: 19.2%; Average loss: 4.1652
+Iteration: 193; Percent complete: 19.3%; Average loss: 3.9881
+Iteration: 194; Percent complete: 19.4%; Average loss: 4.1211
+Iteration: 195; Percent complete: 19.5%; Average loss: 4.0902
+Iteration: 196; Percent complete: 19.6%; Average loss: 3.8663
+Iteration: 197; Percent complete: 19.7%; Average loss: 4.1979
+Iteration: 198; Percent complete: 19.8%; Average loss: 3.9493
+Iteration: 199; Percent complete: 19.9%; Average loss: 4.0254
+Iteration: 200; Percent complete: 20.0%; Average loss: 4.0962
+Iteration: 201; Percent complete: 20.1%; Average loss: 4.1885
+Iteration: 202; Percent complete: 20.2%; Average loss: 4.0958
+Iteration: 203; Percent complete: 20.3%; Average loss: 4.2281
+Iteration: 204; Percent complete: 20.4%; Average loss: 4.2899
+Iteration: 205; Percent complete: 20.5%; Average loss: 3.9562
+Iteration: 206; Percent complete: 20.6%; Average loss: 3.7700
+Iteration: 207; Percent complete: 20.7%; Average loss: 3.7834
+Iteration: 208; Percent complete: 20.8%; Average loss: 4.4664
+Iteration: 209; Percent complete: 20.9%; Average loss: 3.9726
+Iteration: 210; Percent complete: 21.0%; Average loss: 4.2299
+Iteration: 211; Percent complete: 21.1%; Average loss: 4.0828
+Iteration: 212; Percent complete: 21.2%; Average loss: 4.0220
+Iteration: 213; Percent complete: 21.3%; Average loss: 4.1641
+Iteration: 214; Percent complete: 21.4%; Average loss: 4.1348
+Iteration: 215; Percent complete: 21.5%; Average loss: 3.9504
+Iteration: 216; Percent complete: 21.6%; Average loss: 4.0739
+Iteration: 217; Percent complete: 21.7%; Average loss: 3.9882
+Iteration: 218; Percent complete: 21.8%; Average loss: 3.9549
+Iteration: 219; Percent complete: 21.9%; Average loss: 4.0536
+Iteration: 220; Percent complete: 22.0%; Average loss: 4.1498
+Iteration: 221; Percent complete: 22.1%; Average loss: 4.0375
+Iteration: 222; Percent complete: 22.2%; Average loss: 3.9475
+Iteration: 223; Percent complete: 22.3%; Average loss: 4.0247
+Iteration: 224; Percent complete: 22.4%; Average loss: 3.5869
+Iteration: 225; Percent complete: 22.5%; Average loss: 4.0496
+Iteration: 226; Percent complete: 22.6%; Average loss: 3.8528
+Iteration: 227; Percent complete: 22.7%; Average loss: 3.9011
+Iteration: 228; Percent complete: 22.8%; Average loss: 3.9267
+Iteration: 229; Percent complete: 22.9%; Average loss: 4.0542
+Iteration: 230; Percent complete: 23.0%; Average loss: 3.7804
+Iteration: 231; Percent complete: 23.1%; Average loss: 4.0425
+Iteration: 232; Percent complete: 23.2%; Average loss: 4.0901
+Iteration: 233; Percent complete: 23.3%; Average loss: 3.8854
+Iteration: 234; Percent complete: 23.4%; Average loss: 4.0138
+Iteration: 235; Percent complete: 23.5%; Average loss: 3.7483
+Iteration: 236; Percent complete: 23.6%; Average loss: 4.0267
+Iteration: 237; Percent complete: 23.7%; Average loss: 3.8382
+Iteration: 238; Percent complete: 23.8%; Average loss: 3.8613
+Iteration: 239; Percent complete: 23.9%; Average loss: 4.0797
+Iteration: 240; Percent complete: 24.0%; Average loss: 3.9007
+Iteration: 241; Percent complete: 24.1%; Average loss: 4.0109
+Iteration: 242; Percent complete: 24.2%; Average loss: 4.0519
+Iteration: 243; Percent complete: 24.3%; Average loss: 3.9221
+Iteration: 244; Percent complete: 24.4%; Average loss: 3.9580
+Iteration: 245; Percent complete: 24.5%; Average loss: 3.6414
+Iteration: 246; Percent complete: 24.6%; Average loss: 3.7936
+Iteration: 247; Percent complete: 24.7%; Average loss: 4.0539
+Iteration: 248; Percent complete: 24.8%; Average loss: 4.1073
+Iteration: 249; Percent complete: 24.9%; Average loss: 3.7583
+Iteration: 250; Percent complete: 25.0%; Average loss: 4.2348
+Iteration: 251; Percent complete: 25.1%; Average loss: 4.0284
+Iteration: 252; Percent complete: 25.2%; Average loss: 3.8436
+Iteration: 253; Percent complete: 25.3%; Average loss: 3.7626
+Iteration: 254; Percent complete: 25.4%; Average loss: 3.8150
+Iteration: 255; Percent complete: 25.5%; Average loss: 3.8285
+Iteration: 256; Percent complete: 25.6%; Average loss: 4.0016
+Iteration: 257; Percent complete: 25.7%; Average loss: 3.8892
+Iteration: 258; Percent complete: 25.8%; Average loss: 4.2438
+Iteration: 259; Percent complete: 25.9%; Average loss: 3.9387
+Iteration: 260; Percent complete: 26.0%; Average loss: 3.8063
+Iteration: 261; Percent complete: 26.1%; Average loss: 3.9141
+Iteration: 262; Percent complete: 26.2%; Average loss: 3.9855
+Iteration: 263; Percent complete: 26.3%; Average loss: 4.0643
+Iteration: 264; Percent complete: 26.4%; Average loss: 4.1174
+Iteration: 265; Percent complete: 26.5%; Average loss: 3.9879
+Iteration: 266; Percent complete: 26.6%; Average loss: 4.0014
+Iteration: 267; Percent complete: 26.7%; Average loss: 3.9637
+Iteration: 268; Percent complete: 26.8%; Average loss: 3.9455
+Iteration: 269; Percent complete: 26.9%; Average loss: 3.7735
+Iteration: 270; Percent complete: 27.0%; Average loss: 3.7397
+Iteration: 271; Percent complete: 27.1%; Average loss: 3.9790
+Iteration: 272; Percent complete: 27.2%; Average loss: 4.1598
+Iteration: 273; Percent complete: 27.3%; Average loss: 3.9634
+Iteration: 274; Percent complete: 27.4%; Average loss: 3.6851
+Iteration: 275; Percent complete: 27.5%; Average loss: 3.6985
+Iteration: 276; Percent complete: 27.6%; Average loss: 3.7857
+Iteration: 277; Percent complete: 27.7%; Average loss: 3.7958
+Iteration: 278; Percent complete: 27.8%; Average loss: 3.8668
+Iteration: 279; Percent complete: 27.9%; Average loss: 4.0323
+Iteration: 280; Percent complete: 28.0%; Average loss: 3.9067
+Iteration: 281; Percent complete: 28.1%; Average loss: 4.0438
+Iteration: 282; Percent complete: 28.2%; Average loss: 3.9496
+Iteration: 283; Percent complete: 28.3%; Average loss: 3.7571
+Iteration: 284; Percent complete: 28.4%; Average loss: 4.0210
+Iteration: 285; Percent complete: 28.5%; Average loss: 3.8542
+Iteration: 286; Percent complete: 28.6%; Average loss: 3.9099
+Iteration: 287; Percent complete: 28.7%; Average loss: 4.0442
+Iteration: 288; Percent complete: 28.8%; Average loss: 3.5253
+Iteration: 289; Percent complete: 28.9%; Average loss: 3.8080
+Iteration: 290; Percent complete: 29.0%; Average loss: 3.9288
+Iteration: 291; Percent complete: 29.1%; Average loss: 3.8122
+Iteration: 292; Percent complete: 29.2%; Average loss: 3.8332
+Iteration: 293; Percent complete: 29.3%; Average loss: 3.8401
+Iteration: 294; Percent complete: 29.4%; Average loss: 3.4780
+Iteration: 295; Percent complete: 29.5%; Average loss: 4.0056
+Iteration: 296; Percent complete: 29.6%; Average loss: 3.9565
+Iteration: 297; Percent complete: 29.7%; Average loss: 3.7363
+Iteration: 298; Percent complete: 29.8%; Average loss: 3.7506
+Iteration: 299; Percent complete: 29.9%; Average loss: 4.0863
+Iteration: 300; Percent complete: 30.0%; Average loss: 4.2221
+Iteration: 301; Percent complete: 30.1%; Average loss: 4.0168
+Iteration: 302; Percent complete: 30.2%; Average loss: 4.1525
+Iteration: 303; Percent complete: 30.3%; Average loss: 4.1487
+Iteration: 304; Percent complete: 30.4%; Average loss: 3.7667
+Iteration: 305; Percent complete: 30.5%; Average loss: 3.7405
+Iteration: 306; Percent complete: 30.6%; Average loss: 4.0976
+Iteration: 307; Percent complete: 30.7%; Average loss: 4.0067
+Iteration: 308; Percent complete: 30.8%; Average loss: 3.8531
+Iteration: 309; Percent complete: 30.9%; Average loss: 3.9173
+Iteration: 310; Percent complete: 31.0%; Average loss: 3.7680
+Iteration: 311; Percent complete: 31.1%; Average loss: 3.9919
+Iteration: 312; Percent complete: 31.2%; Average loss: 3.8523
+Iteration: 313; Percent complete: 31.3%; Average loss: 3.9720
+Iteration: 314; Percent complete: 31.4%; Average loss: 3.6505
+Iteration: 315; Percent complete: 31.5%; Average loss: 3.7959
+Iteration: 316; Percent complete: 31.6%; Average loss: 4.2726
+Iteration: 317; Percent complete: 31.7%; Average loss: 3.8893
+Iteration: 318; Percent complete: 31.8%; Average loss: 4.0520
+Iteration: 319; Percent complete: 31.9%; Average loss: 4.1016
+Iteration: 320; Percent complete: 32.0%; Average loss: 3.9494
+Iteration: 321; Percent complete: 32.1%; Average loss: 3.7607
+Iteration: 322; Percent complete: 32.2%; Average loss: 3.7707
+Iteration: 323; Percent complete: 32.3%; Average loss: 3.7916
+Iteration: 324; Percent complete: 32.4%; Average loss: 3.8176
+Iteration: 325; Percent complete: 32.5%; Average loss: 3.6705
+Iteration: 326; Percent complete: 32.6%; Average loss: 3.7920
+Iteration: 327; Percent complete: 32.7%; Average loss: 3.8955
+Iteration: 328; Percent complete: 32.8%; Average loss: 3.7539
+Iteration: 329; Percent complete: 32.9%; Average loss: 3.9833
+Iteration: 330; Percent complete: 33.0%; Average loss: 4.1000
+Iteration: 331; Percent complete: 33.1%; Average loss: 3.9669
+Iteration: 332; Percent complete: 33.2%; Average loss: 4.1397
+Iteration: 333; Percent complete: 33.3%; Average loss: 3.7780
+Iteration: 334; Percent complete: 33.4%; Average loss: 3.8568
+Iteration: 335; Percent complete: 33.5%; Average loss: 3.8407
+Iteration: 336; Percent complete: 33.6%; Average loss: 4.1545
+Iteration: 337; Percent complete: 33.7%; Average loss: 3.8116
+Iteration: 338; Percent complete: 33.8%; Average loss: 3.7387
+Iteration: 339; Percent complete: 33.9%; Average loss: 3.9474
+Iteration: 340; Percent complete: 34.0%; Average loss: 4.0167
+Iteration: 341; Percent complete: 34.1%; Average loss: 3.8754
+Iteration: 342; Percent complete: 34.2%; Average loss: 4.0568
+Iteration: 343; Percent complete: 34.3%; Average loss: 3.6073
+Iteration: 344; Percent complete: 34.4%; Average loss: 3.8663
+Iteration: 345; Percent complete: 34.5%; Average loss: 4.0108
+Iteration: 346; Percent complete: 34.6%; Average loss: 3.7426
+Iteration: 347; Percent complete: 34.7%; Average loss: 3.9338
+Iteration: 348; Percent complete: 34.8%; Average loss: 3.6904
+Iteration: 349; Percent complete: 34.9%; Average loss: 3.7742
+Iteration: 350; Percent complete: 35.0%; Average loss: 3.8373
+Iteration: 351; Percent complete: 35.1%; Average loss: 3.9114
+Iteration: 352; Percent complete: 35.2%; Average loss: 3.8434
+Iteration: 353; Percent complete: 35.3%; Average loss: 3.8381
+Iteration: 354; Percent complete: 35.4%; Average loss: 4.1126
+Iteration: 355; Percent complete: 35.5%; Average loss: 3.7622
+Iteration: 356; Percent complete: 35.6%; Average loss: 3.9434
+Iteration: 357; Percent complete: 35.7%; Average loss: 3.7285
+Iteration: 358; Percent complete: 35.8%; Average loss: 3.7665
+Iteration: 359; Percent complete: 35.9%; Average loss: 3.8965
+Iteration: 360; Percent complete: 36.0%; Average loss: 3.9169
+Iteration: 361; Percent complete: 36.1%; Average loss: 3.7671
+Iteration: 362; Percent complete: 36.2%; Average loss: 3.9615
+Iteration: 363; Percent complete: 36.3%; Average loss: 4.0007
+Iteration: 364; Percent complete: 36.4%; Average loss: 3.7963
+Iteration: 365; Percent complete: 36.5%; Average loss: 4.0646
+Iteration: 366; Percent complete: 36.6%; Average loss: 3.7659
+Iteration: 367; Percent complete: 36.7%; Average loss: 3.8480
+Iteration: 368; Percent complete: 36.8%; Average loss: 3.7643
+Iteration: 369; Percent complete: 36.9%; Average loss: 3.6753
+Iteration: 370; Percent complete: 37.0%; Average loss: 4.0416
+Iteration: 371; Percent complete: 37.1%; Average loss: 3.6862
+Iteration: 372; Percent complete: 37.2%; Average loss: 3.8231
+Iteration: 373; Percent complete: 37.3%; Average loss: 3.5966
+Iteration: 374; Percent complete: 37.4%; Average loss: 3.7667
+Iteration: 375; Percent complete: 37.5%; Average loss: 3.9171
+Iteration: 376; Percent complete: 37.6%; Average loss: 3.5892
+Iteration: 377; Percent complete: 37.7%; Average loss: 3.6213
+Iteration: 378; Percent complete: 37.8%; Average loss: 3.7792
+Iteration: 379; Percent complete: 37.9%; Average loss: 3.8507
+Iteration: 380; Percent complete: 38.0%; Average loss: 4.0150
+Iteration: 381; Percent complete: 38.1%; Average loss: 3.8515
+Iteration: 382; Percent complete: 38.2%; Average loss: 4.0539
+Iteration: 383; Percent complete: 38.3%; Average loss: 3.7146
+Iteration: 384; Percent complete: 38.4%; Average loss: 3.8455
+Iteration: 385; Percent complete: 38.5%; Average loss: 3.7499
+Iteration: 386; Percent complete: 38.6%; Average loss: 3.8339
+Iteration: 387; Percent complete: 38.7%; Average loss: 4.0050
+Iteration: 388; Percent complete: 38.8%; Average loss: 3.7823
+Iteration: 389; Percent complete: 38.9%; Average loss: 3.5706
+Iteration: 390; Percent complete: 39.0%; Average loss: 4.0144
+Iteration: 391; Percent complete: 39.1%; Average loss: 3.6009
+Iteration: 392; Percent complete: 39.2%; Average loss: 4.1889
+Iteration: 393; Percent complete: 39.3%; Average loss: 3.5765
+Iteration: 394; Percent complete: 39.4%; Average loss: 3.6503
+Iteration: 395; Percent complete: 39.5%; Average loss: 3.9706
+Iteration: 396; Percent complete: 39.6%; Average loss: 3.8763
+Iteration: 397; Percent complete: 39.7%; Average loss: 3.9842
+Iteration: 398; Percent complete: 39.8%; Average loss: 3.7132
+Iteration: 399; Percent complete: 39.9%; Average loss: 3.4533
+Iteration: 400; Percent complete: 40.0%; Average loss: 3.9147
+Iteration: 401; Percent complete: 40.1%; Average loss: 3.8295
+Iteration: 402; Percent complete: 40.2%; Average loss: 3.7779
+Iteration: 403; Percent complete: 40.3%; Average loss: 3.6041
+Iteration: 404; Percent complete: 40.4%; Average loss: 3.4594
+Iteration: 405; Percent complete: 40.5%; Average loss: 3.7960
+Iteration: 406; Percent complete: 40.6%; Average loss: 3.7574
+Iteration: 407; Percent complete: 40.7%; Average loss: 3.8871
+Iteration: 408; Percent complete: 40.8%; Average loss: 3.7636
+Iteration: 409; Percent complete: 40.9%; Average loss: 3.6389
+Iteration: 410; Percent complete: 41.0%; Average loss: 3.6052
+Iteration: 411; Percent complete: 41.1%; Average loss: 3.8139
+Iteration: 412; Percent complete: 41.2%; Average loss: 3.6091
+Iteration: 413; Percent complete: 41.3%; Average loss: 3.8413
+Iteration: 414; Percent complete: 41.4%; Average loss: 3.8136
+Iteration: 415; Percent complete: 41.5%; Average loss: 3.7524
+Iteration: 416; Percent complete: 41.6%; Average loss: 3.8573
+Iteration: 417; Percent complete: 41.7%; Average loss: 4.0003
+Iteration: 418; Percent complete: 41.8%; Average loss: 3.8400
+Iteration: 419; Percent complete: 41.9%; Average loss: 3.7189
+Iteration: 420; Percent complete: 42.0%; Average loss: 3.8048
+Iteration: 421; Percent complete: 42.1%; Average loss: 3.7207
+Iteration: 422; Percent complete: 42.2%; Average loss: 4.0296
+Iteration: 423; Percent complete: 42.3%; Average loss: 3.8712
+Iteration: 424; Percent complete: 42.4%; Average loss: 3.9288
+Iteration: 425; Percent complete: 42.5%; Average loss: 3.7133
+Iteration: 426; Percent complete: 42.6%; Average loss: 3.6657
+Iteration: 427; Percent complete: 42.7%; Average loss: 3.9093
+Iteration: 428; Percent complete: 42.8%; Average loss: 3.7716
+Iteration: 429; Percent complete: 42.9%; Average loss: 3.7443
+Iteration: 430; Percent complete: 43.0%; Average loss: 3.6916
+Iteration: 431; Percent complete: 43.1%; Average loss: 3.7587
+Iteration: 432; Percent complete: 43.2%; Average loss: 3.6718
+Iteration: 433; Percent complete: 43.3%; Average loss: 3.5604
+Iteration: 434; Percent complete: 43.4%; Average loss: 3.5848
+Iteration: 435; Percent complete: 43.5%; Average loss: 3.5456
+Iteration: 436; Percent complete: 43.6%; Average loss: 3.8144
+Iteration: 437; Percent complete: 43.7%; Average loss: 3.9645
+Iteration: 438; Percent complete: 43.8%; Average loss: 3.7704
+Iteration: 439; Percent complete: 43.9%; Average loss: 3.7024
+Iteration: 440; Percent complete: 44.0%; Average loss: 3.5106
+Iteration: 441; Percent complete: 44.1%; Average loss: 4.0613
+Iteration: 442; Percent complete: 44.2%; Average loss: 3.4331
+Iteration: 443; Percent complete: 44.3%; Average loss: 3.8315
+Iteration: 444; Percent complete: 44.4%; Average loss: 3.8394
+Iteration: 445; Percent complete: 44.5%; Average loss: 3.5969
+Iteration: 446; Percent complete: 44.6%; Average loss: 3.7605
+Iteration: 447; Percent complete: 44.7%; Average loss: 3.8606
+Iteration: 448; Percent complete: 44.8%; Average loss: 3.5600
+Iteration: 449; Percent complete: 44.9%; Average loss: 3.9500
+Iteration: 450; Percent complete: 45.0%; Average loss: 4.0257
+Iteration: 451; Percent complete: 45.1%; Average loss: 3.5868
+Iteration: 452; Percent complete: 45.2%; Average loss: 3.6011
+Iteration: 453; Percent complete: 45.3%; Average loss: 3.5338
+Iteration: 454; Percent complete: 45.4%; Average loss: 3.7303
+Iteration: 455; Percent complete: 45.5%; Average loss: 3.9763
+Iteration: 456; Percent complete: 45.6%; Average loss: 3.9404
+Iteration: 457; Percent complete: 45.7%; Average loss: 4.0707
+Iteration: 458; Percent complete: 45.8%; Average loss: 3.8623
+Iteration: 459; Percent complete: 45.9%; Average loss: 3.4862
+Iteration: 460; Percent complete: 46.0%; Average loss: 3.9474
+Iteration: 461; Percent complete: 46.1%; Average loss: 3.7187
+Iteration: 462; Percent complete: 46.2%; Average loss: 3.3967
+Iteration: 463; Percent complete: 46.3%; Average loss: 3.2668
+Iteration: 464; Percent complete: 46.4%; Average loss: 3.7379
+Iteration: 465; Percent complete: 46.5%; Average loss: 3.8381
+Iteration: 466; Percent complete: 46.6%; Average loss: 3.8135
+Iteration: 467; Percent complete: 46.7%; Average loss: 3.5830
+Iteration: 468; Percent complete: 46.8%; Average loss: 4.0162
+Iteration: 469; Percent complete: 46.9%; Average loss: 3.7175
+Iteration: 470; Percent complete: 47.0%; Average loss: 3.7247
+Iteration: 471; Percent complete: 47.1%; Average loss: 3.6575
+Iteration: 472; Percent complete: 47.2%; Average loss: 3.8869
+Iteration: 473; Percent complete: 47.3%; Average loss: 3.7271
+Iteration: 474; Percent complete: 47.4%; Average loss: 3.8959
+Iteration: 475; Percent complete: 47.5%; Average loss: 3.8769
+Iteration: 476; Percent complete: 47.6%; Average loss: 3.6154
+Iteration: 477; Percent complete: 47.7%; Average loss: 3.6499
+Iteration: 478; Percent complete: 47.8%; Average loss: 3.7125
+Iteration: 479; Percent complete: 47.9%; Average loss: 3.9088
+Iteration: 480; Percent complete: 48.0%; Average loss: 3.6121
+Iteration: 481; Percent complete: 48.1%; Average loss: 3.7088
+Iteration: 482; Percent complete: 48.2%; Average loss: 3.6394
+Iteration: 483; Percent complete: 48.3%; Average loss: 3.7906
+Iteration: 484; Percent complete: 48.4%; Average loss: 3.6384
+Iteration: 485; Percent complete: 48.5%; Average loss: 3.5339
+Iteration: 486; Percent complete: 48.6%; Average loss: 3.7285
+Iteration: 487; Percent complete: 48.7%; Average loss: 3.5530
+Iteration: 488; Percent complete: 48.8%; Average loss: 3.6902
+Iteration: 489; Percent complete: 48.9%; Average loss: 3.5347
+Iteration: 490; Percent complete: 49.0%; Average loss: 3.7416
+Iteration: 491; Percent complete: 49.1%; Average loss: 3.6769
+Iteration: 492; Percent complete: 49.2%; Average loss: 3.7450
+Iteration: 493; Percent complete: 49.3%; Average loss: 3.3446
+Iteration: 494; Percent complete: 49.4%; Average loss: 3.6411
+Iteration: 495; Percent complete: 49.5%; Average loss: 3.7571
+Iteration: 496; Percent complete: 49.6%; Average loss: 3.6217
+Iteration: 497; Percent complete: 49.7%; Average loss: 3.6993
+Iteration: 498; Percent complete: 49.8%; Average loss: 3.4997
+Iteration: 499; Percent complete: 49.9%; Average loss: 3.7924
+Iteration: 500; Percent complete: 50.0%; Average loss: 3.7749
+Iteration: 501; Percent complete: 50.1%; Average loss: 3.6313
+Iteration: 502; Percent complete: 50.2%; Average loss: 3.8055
+Iteration: 503; Percent complete: 50.3%; Average loss: 3.4919
+Iteration: 504; Percent complete: 50.4%; Average loss: 3.6884
+Iteration: 505; Percent complete: 50.5%; Average loss: 3.6448
+Iteration: 506; Percent complete: 50.6%; Average loss: 3.8515
+Iteration: 507; Percent complete: 50.7%; Average loss: 3.6526
+Iteration: 508; Percent complete: 50.8%; Average loss: 3.5884
+Iteration: 509; Percent complete: 50.9%; Average loss: 3.6354
+Iteration: 510; Percent complete: 51.0%; Average loss: 3.4917
+Iteration: 511; Percent complete: 51.1%; Average loss: 3.4628
+Iteration: 512; Percent complete: 51.2%; Average loss: 3.9735
+Iteration: 513; Percent complete: 51.3%; Average loss: 3.6574
+Iteration: 514; Percent complete: 51.4%; Average loss: 3.8490
+Iteration: 515; Percent complete: 51.5%; Average loss: 3.6571
+Iteration: 516; Percent complete: 51.6%; Average loss: 3.7809
+Iteration: 517; Percent complete: 51.7%; Average loss: 3.6320
+Iteration: 518; Percent complete: 51.8%; Average loss: 3.5086
+Iteration: 519; Percent complete: 51.9%; Average loss: 3.6719
+Iteration: 520; Percent complete: 52.0%; Average loss: 3.8427
+Iteration: 521; Percent complete: 52.1%; Average loss: 3.6153
+Iteration: 522; Percent complete: 52.2%; Average loss: 3.5752
+Iteration: 523; Percent complete: 52.3%; Average loss: 3.6869
+Iteration: 524; Percent complete: 52.4%; Average loss: 3.6623
+Iteration: 525; Percent complete: 52.5%; Average loss: 3.7293
+Iteration: 526; Percent complete: 52.6%; Average loss: 3.6861
+Iteration: 527; Percent complete: 52.7%; Average loss: 3.6769
+Iteration: 528; Percent complete: 52.8%; Average loss: 3.7840
+Iteration: 529; Percent complete: 52.9%; Average loss: 3.9137
+Iteration: 530; Percent complete: 53.0%; Average loss: 3.5917
+Iteration: 531; Percent complete: 53.1%; Average loss: 3.5857
+Iteration: 532; Percent complete: 53.2%; Average loss: 3.8912
+Iteration: 533; Percent complete: 53.3%; Average loss: 3.9102
+Iteration: 534; Percent complete: 53.4%; Average loss: 3.4832
+Iteration: 535; Percent complete: 53.5%; Average loss: 3.7263
+Iteration: 536; Percent complete: 53.6%; Average loss: 3.8139
+Iteration: 537; Percent complete: 53.7%; Average loss: 3.4807
+Iteration: 538; Percent complete: 53.8%; Average loss: 3.8212
+Iteration: 539; Percent complete: 53.9%; Average loss: 3.6584
+Iteration: 540; Percent complete: 54.0%; Average loss: 3.6530
+Iteration: 541; Percent complete: 54.1%; Average loss: 3.5872
+Iteration: 542; Percent complete: 54.2%; Average loss: 3.8111
+Iteration: 543; Percent complete: 54.3%; Average loss: 3.5492
+Iteration: 544; Percent complete: 54.4%; Average loss: 3.6929
+Iteration: 545; Percent complete: 54.5%; Average loss: 3.5803
+Iteration: 546; Percent complete: 54.6%; Average loss: 3.6033
+Iteration: 547; Percent complete: 54.7%; Average loss: 3.5540
+Iteration: 548; Percent complete: 54.8%; Average loss: 3.7060
+Iteration: 549; Percent complete: 54.9%; Average loss: 3.7695
+Iteration: 550; Percent complete: 55.0%; Average loss: 3.7475
+Iteration: 551; Percent complete: 55.1%; Average loss: 3.5862
+Iteration: 552; Percent complete: 55.2%; Average loss: 3.6448
+Iteration: 553; Percent complete: 55.3%; Average loss: 3.6934
+Iteration: 554; Percent complete: 55.4%; Average loss: 3.5423
+Iteration: 555; Percent complete: 55.5%; Average loss: 3.7159
+Iteration: 556; Percent complete: 55.6%; Average loss: 3.5464
+Iteration: 557; Percent complete: 55.7%; Average loss: 3.5929
+Iteration: 558; Percent complete: 55.8%; Average loss: 3.5314
+Iteration: 559; Percent complete: 55.9%; Average loss: 3.7578
+Iteration: 560; Percent complete: 56.0%; Average loss: 3.6960
+Iteration: 561; Percent complete: 56.1%; Average loss: 3.6579
+Iteration: 562; Percent complete: 56.2%; Average loss: 3.6663
+Iteration: 563; Percent complete: 56.3%; Average loss: 3.9690
+Iteration: 564; Percent complete: 56.4%; Average loss: 3.5902
+Iteration: 565; Percent complete: 56.5%; Average loss: 3.5888
+Iteration: 566; Percent complete: 56.6%; Average loss: 3.4066
+Iteration: 567; Percent complete: 56.7%; Average loss: 3.8641
+Iteration: 568; Percent complete: 56.8%; Average loss: 3.4846
+Iteration: 569; Percent complete: 56.9%; Average loss: 3.9152
+Iteration: 570; Percent complete: 57.0%; Average loss: 3.6131
+Iteration: 571; Percent complete: 57.1%; Average loss: 3.8341
+Iteration: 572; Percent complete: 57.2%; Average loss: 3.6300
+Iteration: 573; Percent complete: 57.3%; Average loss: 3.6531
+Iteration: 574; Percent complete: 57.4%; Average loss: 3.6882
+Iteration: 575; Percent complete: 57.5%; Average loss: 3.7229
+Iteration: 576; Percent complete: 57.6%; Average loss: 3.7657
+Iteration: 577; Percent complete: 57.7%; Average loss: 3.9300
+Iteration: 578; Percent complete: 57.8%; Average loss: 3.5534
+Iteration: 579; Percent complete: 57.9%; Average loss: 3.9869
+Iteration: 580; Percent complete: 58.0%; Average loss: 3.6955
+Iteration: 581; Percent complete: 58.1%; Average loss: 3.5894
+Iteration: 582; Percent complete: 58.2%; Average loss: 3.7145
+Iteration: 583; Percent complete: 58.3%; Average loss: 3.3088
+Iteration: 584; Percent complete: 58.4%; Average loss: 3.9125
+Iteration: 585; Percent complete: 58.5%; Average loss: 3.6678
+Iteration: 586; Percent complete: 58.6%; Average loss: 3.5794
+Iteration: 587; Percent complete: 58.7%; Average loss: 3.6622
+Iteration: 588; Percent complete: 58.8%; Average loss: 3.5202
+Iteration: 589; Percent complete: 58.9%; Average loss: 3.5964
+Iteration: 590; Percent complete: 59.0%; Average loss: 3.4992
+Iteration: 591; Percent complete: 59.1%; Average loss: 3.7222
+Iteration: 592; Percent complete: 59.2%; Average loss: 3.8669
+Iteration: 593; Percent complete: 59.3%; Average loss: 3.6330
+Iteration: 594; Percent complete: 59.4%; Average loss: 3.5843
+Iteration: 595; Percent complete: 59.5%; Average loss: 3.6021
+Iteration: 596; Percent complete: 59.6%; Average loss: 3.7922
+Iteration: 597; Percent complete: 59.7%; Average loss: 3.6654
+Iteration: 598; Percent complete: 59.8%; Average loss: 3.6717
+Iteration: 599; Percent complete: 59.9%; Average loss: 3.7436
+Iteration: 600; Percent complete: 60.0%; Average loss: 3.8152
+Iteration: 601; Percent complete: 60.1%; Average loss: 3.5124
+Iteration: 602; Percent complete: 60.2%; Average loss: 3.5503
+Iteration: 603; Percent complete: 60.3%; Average loss: 3.7399
+Iteration: 604; Percent complete: 60.4%; Average loss: 3.6065
+Iteration: 605; Percent complete: 60.5%; Average loss: 3.6129
+Iteration: 606; Percent complete: 60.6%; Average loss: 3.6463
+Iteration: 607; Percent complete: 60.7%; Average loss: 3.6649
+Iteration: 608; Percent complete: 60.8%; Average loss: 3.5370
+Iteration: 609; Percent complete: 60.9%; Average loss: 3.2729
+Iteration: 610; Percent complete: 61.0%; Average loss: 3.6893
+Iteration: 611; Percent complete: 61.1%; Average loss: 3.5463
+Iteration: 612; Percent complete: 61.2%; Average loss: 3.7597
+Iteration: 613; Percent complete: 61.3%; Average loss: 3.9222
+Iteration: 614; Percent complete: 61.4%; Average loss: 3.9312
+Iteration: 615; Percent complete: 61.5%; Average loss: 3.8954
+Iteration: 616; Percent complete: 61.6%; Average loss: 3.7032
+Iteration: 617; Percent complete: 61.7%; Average loss: 3.8256
+Iteration: 618; Percent complete: 61.8%; Average loss: 3.8938
+Iteration: 619; Percent complete: 61.9%; Average loss: 3.4435
+Iteration: 620; Percent complete: 62.0%; Average loss: 3.2905
+Iteration: 621; Percent complete: 62.1%; Average loss: 3.9002
+Iteration: 622; Percent complete: 62.2%; Average loss: 3.4787
+Iteration: 623; Percent complete: 62.3%; Average loss: 3.5154
+Iteration: 624; Percent complete: 62.4%; Average loss: 3.5375
+Iteration: 625; Percent complete: 62.5%; Average loss: 3.6761
+Iteration: 626; Percent complete: 62.6%; Average loss: 3.6349
+Iteration: 627; Percent complete: 62.7%; Average loss: 3.5999
+Iteration: 628; Percent complete: 62.8%; Average loss: 3.4962
+Iteration: 629; Percent complete: 62.9%; Average loss: 3.5166
+Iteration: 630; Percent complete: 63.0%; Average loss: 3.6476
+Iteration: 631; Percent complete: 63.1%; Average loss: 3.6526
+Iteration: 632; Percent complete: 63.2%; Average loss: 3.4660
+Iteration: 633; Percent complete: 63.3%; Average loss: 3.6829
+Iteration: 634; Percent complete: 63.4%; Average loss: 3.7100
+Iteration: 635; Percent complete: 63.5%; Average loss: 3.2148
+Iteration: 636; Percent complete: 63.6%; Average loss: 3.6353
+Iteration: 637; Percent complete: 63.7%; Average loss: 3.8920
+Iteration: 638; Percent complete: 63.8%; Average loss: 3.5892
+Iteration: 639; Percent complete: 63.9%; Average loss: 3.6511
+Iteration: 640; Percent complete: 64.0%; Average loss: 3.7794
+Iteration: 641; Percent complete: 64.1%; Average loss: 3.8641
+Iteration: 642; Percent complete: 64.2%; Average loss: 3.6779
+Iteration: 643; Percent complete: 64.3%; Average loss: 3.5290
+Iteration: 644; Percent complete: 64.4%; Average loss: 3.5573
+Iteration: 645; Percent complete: 64.5%; Average loss: 3.3289
+Iteration: 646; Percent complete: 64.6%; Average loss: 3.7349
+Iteration: 647; Percent complete: 64.7%; Average loss: 3.7734
+Iteration: 648; Percent complete: 64.8%; Average loss: 3.7573
+Iteration: 649; Percent complete: 64.9%; Average loss: 3.6919
+Iteration: 650; Percent complete: 65.0%; Average loss: 3.5593
+Iteration: 651; Percent complete: 65.1%; Average loss: 3.7535
+Iteration: 652; Percent complete: 65.2%; Average loss: 3.4528
+Iteration: 653; Percent complete: 65.3%; Average loss: 3.5076
+Iteration: 654; Percent complete: 65.4%; Average loss: 3.7521
+Iteration: 655; Percent complete: 65.5%; Average loss: 3.5782
+Iteration: 656; Percent complete: 65.6%; Average loss: 3.5598
+Iteration: 657; Percent complete: 65.7%; Average loss: 3.5161
+Iteration: 658; Percent complete: 65.8%; Average loss: 3.4966
+Iteration: 659; Percent complete: 65.9%; Average loss: 3.8700
+Iteration: 660; Percent complete: 66.0%; Average loss: 3.7623
+Iteration: 661; Percent complete: 66.1%; Average loss: 3.6986
+Iteration: 662; Percent complete: 66.2%; Average loss: 3.5378
+Iteration: 663; Percent complete: 66.3%; Average loss: 3.6928
+Iteration: 664; Percent complete: 66.4%; Average loss: 3.3575
+Iteration: 665; Percent complete: 66.5%; Average loss: 3.4132
+Iteration: 666; Percent complete: 66.6%; Average loss: 3.8567
+Iteration: 667; Percent complete: 66.7%; Average loss: 3.4509
+Iteration: 668; Percent complete: 66.8%; Average loss: 3.4279
+Iteration: 669; Percent complete: 66.9%; Average loss: 3.4626
+Iteration: 670; Percent complete: 67.0%; Average loss: 3.4229
+Iteration: 671; Percent complete: 67.1%; Average loss: 3.3878
+Iteration: 672; Percent complete: 67.2%; Average loss: 3.4927
+Iteration: 673; Percent complete: 67.3%; Average loss: 3.8439
+Iteration: 674; Percent complete: 67.4%; Average loss: 3.4656
+Iteration: 675; Percent complete: 67.5%; Average loss: 3.5994
+Iteration: 676; Percent complete: 67.6%; Average loss: 3.4676
+Iteration: 677; Percent complete: 67.7%; Average loss: 3.5966
+Iteration: 678; Percent complete: 67.8%; Average loss: 3.4998
+Iteration: 679; Percent complete: 67.9%; Average loss: 3.6701
+Iteration: 680; Percent complete: 68.0%; Average loss: 3.4770
+Iteration: 681; Percent complete: 68.1%; Average loss: 3.5686
+Iteration: 682; Percent complete: 68.2%; Average loss: 3.7671
+Iteration: 683; Percent complete: 68.3%; Average loss: 3.5840
+Iteration: 684; Percent complete: 68.4%; Average loss: 3.7334
+Iteration: 685; Percent complete: 68.5%; Average loss: 3.6845
+Iteration: 686; Percent complete: 68.6%; Average loss: 3.5436
+Iteration: 687; Percent complete: 68.7%; Average loss: 3.6042
+Iteration: 688; Percent complete: 68.8%; Average loss: 3.4879
+Iteration: 689; Percent complete: 68.9%; Average loss: 3.4670
+Iteration: 690; Percent complete: 69.0%; Average loss: 3.5037
+Iteration: 691; Percent complete: 69.1%; Average loss: 3.6237
+Iteration: 692; Percent complete: 69.2%; Average loss: 3.5156
+Iteration: 693; Percent complete: 69.3%; Average loss: 3.6540
+Iteration: 694; Percent complete: 69.4%; Average loss: 3.8493
+Iteration: 695; Percent complete: 69.5%; Average loss: 3.5934
+Iteration: 696; Percent complete: 69.6%; Average loss: 3.6938
+Iteration: 697; Percent complete: 69.7%; Average loss: 3.4739
+Iteration: 698; Percent complete: 69.8%; Average loss: 3.7832
+Iteration: 699; Percent complete: 69.9%; Average loss: 3.4459
+Iteration: 700; Percent complete: 70.0%; Average loss: 3.4786
+Iteration: 701; Percent complete: 70.1%; Average loss: 3.9214
+Iteration: 702; Percent complete: 70.2%; Average loss: 3.7576
+Iteration: 703; Percent complete: 70.3%; Average loss: 3.4774
+Iteration: 704; Percent complete: 70.4%; Average loss: 3.9799
+Iteration: 705; Percent complete: 70.5%; Average loss: 3.7609
+Iteration: 706; Percent complete: 70.6%; Average loss: 3.7672
+Iteration: 707; Percent complete: 70.7%; Average loss: 3.3394
+Iteration: 708; Percent complete: 70.8%; Average loss: 3.5081
+Iteration: 709; Percent complete: 70.9%; Average loss: 3.5201
+Iteration: 710; Percent complete: 71.0%; Average loss: 3.7673
+Iteration: 711; Percent complete: 71.1%; Average loss: 3.7178
+Iteration: 712; Percent complete: 71.2%; Average loss: 3.4409
+Iteration: 713; Percent complete: 71.3%; Average loss: 3.2325
+Iteration: 714; Percent complete: 71.4%; Average loss: 3.5942
+Iteration: 715; Percent complete: 71.5%; Average loss: 3.5527
+Iteration: 716; Percent complete: 71.6%; Average loss: 3.8291
+Iteration: 717; Percent complete: 71.7%; Average loss: 3.4478
+Iteration: 718; Percent complete: 71.8%; Average loss: 3.5509
+Iteration: 719; Percent complete: 71.9%; Average loss: 3.7449
+Iteration: 720; Percent complete: 72.0%; Average loss: 3.3439
+Iteration: 721; Percent complete: 72.1%; Average loss: 3.5233
+Iteration: 722; Percent complete: 72.2%; Average loss: 3.5065
+Iteration: 723; Percent complete: 72.3%; Average loss: 3.6651
+Iteration: 724; Percent complete: 72.4%; Average loss: 3.6783
+Iteration: 725; Percent complete: 72.5%; Average loss: 3.7756
+Iteration: 726; Percent complete: 72.6%; Average loss: 3.6835
+Iteration: 727; Percent complete: 72.7%; Average loss: 3.6758
+Iteration: 728; Percent complete: 72.8%; Average loss: 3.7025
+Iteration: 729; Percent complete: 72.9%; Average loss: 3.8566
+Iteration: 730; Percent complete: 73.0%; Average loss: 3.6691
+Iteration: 731; Percent complete: 73.1%; Average loss: 3.2719
+Iteration: 732; Percent complete: 73.2%; Average loss: 3.7958
+Iteration: 733; Percent complete: 73.3%; Average loss: 3.2899
+Iteration: 734; Percent complete: 73.4%; Average loss: 3.8065
+Iteration: 735; Percent complete: 73.5%; Average loss: 3.4223
+Iteration: 736; Percent complete: 73.6%; Average loss: 3.5450
+Iteration: 737; Percent complete: 73.7%; Average loss: 3.4924
+Iteration: 738; Percent complete: 73.8%; Average loss: 3.6278
+Iteration: 739; Percent complete: 73.9%; Average loss: 3.6264
+Iteration: 740; Percent complete: 74.0%; Average loss: 3.3244
+Iteration: 741; Percent complete: 74.1%; Average loss: 3.8046
+Iteration: 742; Percent complete: 74.2%; Average loss: 3.3516
+Iteration: 743; Percent complete: 74.3%; Average loss: 3.5392
+Iteration: 744; Percent complete: 74.4%; Average loss: 3.6894
+Iteration: 745; Percent complete: 74.5%; Average loss: 3.6203
+Iteration: 746; Percent complete: 74.6%; Average loss: 3.7378
+Iteration: 747; Percent complete: 74.7%; Average loss: 3.5733
+Iteration: 748; Percent complete: 74.8%; Average loss: 3.4805
+Iteration: 749; Percent complete: 74.9%; Average loss: 3.7110
+Iteration: 750; Percent complete: 75.0%; Average loss: 3.6722
+Iteration: 751; Percent complete: 75.1%; Average loss: 3.5784
+Iteration: 752; Percent complete: 75.2%; Average loss: 3.5288
+Iteration: 753; Percent complete: 75.3%; Average loss: 3.7409
+Iteration: 754; Percent complete: 75.4%; Average loss: 3.4942
+Iteration: 755; Percent complete: 75.5%; Average loss: 3.8572
+Iteration: 756; Percent complete: 75.6%; Average loss: 3.5988
+Iteration: 757; Percent complete: 75.7%; Average loss: 3.4908
+Iteration: 758; Percent complete: 75.8%; Average loss: 3.6421
+Iteration: 759; Percent complete: 75.9%; Average loss: 3.5878
+Iteration: 760; Percent complete: 76.0%; Average loss: 3.3268
+Iteration: 761; Percent complete: 76.1%; Average loss: 3.7846
+Iteration: 762; Percent complete: 76.2%; Average loss: 3.5138
+Iteration: 763; Percent complete: 76.3%; Average loss: 3.4773
+Iteration: 764; Percent complete: 76.4%; Average loss: 3.5394
+Iteration: 765; Percent complete: 76.5%; Average loss: 3.2726
+Iteration: 766; Percent complete: 76.6%; Average loss: 3.5188
+Iteration: 767; Percent complete: 76.7%; Average loss: 3.3708
+Iteration: 768; Percent complete: 76.8%; Average loss: 3.3518
+Iteration: 769; Percent complete: 76.9%; Average loss: 3.8702
+Iteration: 770; Percent complete: 77.0%; Average loss: 3.3600
+Iteration: 771; Percent complete: 77.1%; Average loss: 3.8261
+Iteration: 772; Percent complete: 77.2%; Average loss: 3.3845
+Iteration: 773; Percent complete: 77.3%; Average loss: 3.3498
+Iteration: 774; Percent complete: 77.4%; Average loss: 3.3115
+Iteration: 775; Percent complete: 77.5%; Average loss: 3.3938
+Iteration: 776; Percent complete: 77.6%; Average loss: 3.6431
+Iteration: 777; Percent complete: 77.7%; Average loss: 3.5615
+Iteration: 778; Percent complete: 77.8%; Average loss: 3.6671
+Iteration: 779; Percent complete: 77.9%; Average loss: 3.6190
+Iteration: 780; Percent complete: 78.0%; Average loss: 3.5554
+Iteration: 781; Percent complete: 78.1%; Average loss: 3.5385
+Iteration: 782; Percent complete: 78.2%; Average loss: 3.5366
+Iteration: 783; Percent complete: 78.3%; Average loss: 3.6273
+Iteration: 784; Percent complete: 78.4%; Average loss: 3.6240
+Iteration: 785; Percent complete: 78.5%; Average loss: 3.4448
+Iteration: 786; Percent complete: 78.6%; Average loss: 3.5451
+Iteration: 787; Percent complete: 78.7%; Average loss: 3.5096
+Iteration: 788; Percent complete: 78.8%; Average loss: 3.5622
+Iteration: 789; Percent complete: 78.9%; Average loss: 3.4250
+Iteration: 790; Percent complete: 79.0%; Average loss: 3.6224
+Iteration: 791; Percent complete: 79.1%; Average loss: 3.6266
+Iteration: 792; Percent complete: 79.2%; Average loss: 3.6187
+Iteration: 793; Percent complete: 79.3%; Average loss: 3.5888
+Iteration: 794; Percent complete: 79.4%; Average loss: 3.6782
+Iteration: 795; Percent complete: 79.5%; Average loss: 3.5982
+Iteration: 796; Percent complete: 79.6%; Average loss: 3.7031
+Iteration: 797; Percent complete: 79.7%; Average loss: 3.5399
+Iteration: 798; Percent complete: 79.8%; Average loss: 3.5621
+Iteration: 799; Percent complete: 79.9%; Average loss: 3.8215
+Iteration: 800; Percent complete: 80.0%; Average loss: 3.1987
+Iteration: 801; Percent complete: 80.1%; Average loss: 3.6397
+Iteration: 802; Percent complete: 80.2%; Average loss: 3.5028
+Iteration: 803; Percent complete: 80.3%; Average loss: 3.6012
+Iteration: 804; Percent complete: 80.4%; Average loss: 3.4214
+Iteration: 805; Percent complete: 80.5%; Average loss: 3.6597
+Iteration: 806; Percent complete: 80.6%; Average loss: 3.5304
+Iteration: 807; Percent complete: 80.7%; Average loss: 3.8488
+Iteration: 808; Percent complete: 80.8%; Average loss: 4.0270
+Iteration: 809; Percent complete: 80.9%; Average loss: 3.6412
+Iteration: 810; Percent complete: 81.0%; Average loss: 3.3117
+Iteration: 811; Percent complete: 81.1%; Average loss: 3.5140
+Iteration: 812; Percent complete: 81.2%; Average loss: 3.6701
+Iteration: 813; Percent complete: 81.3%; Average loss: 3.5539
+Iteration: 814; Percent complete: 81.4%; Average loss: 3.5000
+Iteration: 815; Percent complete: 81.5%; Average loss: 3.2826
+Iteration: 816; Percent complete: 81.6%; Average loss: 3.7700
+Iteration: 817; Percent complete: 81.7%; Average loss: 3.5533
+Iteration: 818; Percent complete: 81.8%; Average loss: 3.5141
+Iteration: 819; Percent complete: 81.9%; Average loss: 3.3247
+Iteration: 820; Percent complete: 82.0%; Average loss: 3.7645
+Iteration: 821; Percent complete: 82.1%; Average loss: 3.7067
+Iteration: 822; Percent complete: 82.2%; Average loss: 3.3864
+Iteration: 823; Percent complete: 82.3%; Average loss: 3.4545
+Iteration: 824; Percent complete: 82.4%; Average loss: 3.9120
+Iteration: 825; Percent complete: 82.5%; Average loss: 3.6035
+Iteration: 826; Percent complete: 82.6%; Average loss: 3.4006
+Iteration: 827; Percent complete: 82.7%; Average loss: 3.3133
+Iteration: 828; Percent complete: 82.8%; Average loss: 3.4897
+Iteration: 829; Percent complete: 82.9%; Average loss: 3.5173
+Iteration: 830; Percent complete: 83.0%; Average loss: 3.2513
+Iteration: 831; Percent complete: 83.1%; Average loss: 3.6904
+Iteration: 832; Percent complete: 83.2%; Average loss: 3.4793
+Iteration: 833; Percent complete: 83.3%; Average loss: 3.5210
+Iteration: 834; Percent complete: 83.4%; Average loss: 3.4015
+Iteration: 835; Percent complete: 83.5%; Average loss: 3.2460
+Iteration: 836; Percent complete: 83.6%; Average loss: 3.4435
+Iteration: 837; Percent complete: 83.7%; Average loss: 3.3496
+Iteration: 838; Percent complete: 83.8%; Average loss: 3.5869
+Iteration: 839; Percent complete: 83.9%; Average loss: 3.6808
+Iteration: 840; Percent complete: 84.0%; Average loss: 3.6199
+Iteration: 841; Percent complete: 84.1%; Average loss: 3.5634
+Iteration: 842; Percent complete: 84.2%; Average loss: 3.5316
+Iteration: 843; Percent complete: 84.3%; Average loss: 3.5982
+Iteration: 844; Percent complete: 84.4%; Average loss: 3.1697
+Iteration: 845; Percent complete: 84.5%; Average loss: 3.7377
+Iteration: 846; Percent complete: 84.6%; Average loss: 3.2977
+Iteration: 847; Percent complete: 84.7%; Average loss: 3.6367
+Iteration: 848; Percent complete: 84.8%; Average loss: 3.3434
+Iteration: 849; Percent complete: 84.9%; Average loss: 3.2596
+Iteration: 850; Percent complete: 85.0%; Average loss: 3.3580
+Iteration: 851; Percent complete: 85.1%; Average loss: 3.5667
+Iteration: 852; Percent complete: 85.2%; Average loss: 4.1082
+Iteration: 853; Percent complete: 85.3%; Average loss: 3.7117
+Iteration: 854; Percent complete: 85.4%; Average loss: 3.3385
+Iteration: 855; Percent complete: 85.5%; Average loss: 3.4631
+Iteration: 856; Percent complete: 85.6%; Average loss: 3.4482
+Iteration: 857; Percent complete: 85.7%; Average loss: 3.4803
+Iteration: 858; Percent complete: 85.8%; Average loss: 3.2581
+Iteration: 859; Percent complete: 85.9%; Average loss: 3.3449
+Iteration: 860; Percent complete: 86.0%; Average loss: 3.3899
+Iteration: 861; Percent complete: 86.1%; Average loss: 3.5945
+Iteration: 862; Percent complete: 86.2%; Average loss: 3.3442
+Iteration: 863; Percent complete: 86.3%; Average loss: 3.5597
+Iteration: 864; Percent complete: 86.4%; Average loss: 3.3489
+Iteration: 865; Percent complete: 86.5%; Average loss: 3.2107
+Iteration: 866; Percent complete: 86.6%; Average loss: 3.4644
+Iteration: 867; Percent complete: 86.7%; Average loss: 3.5565
+Iteration: 868; Percent complete: 86.8%; Average loss: 3.5612
+Iteration: 869; Percent complete: 86.9%; Average loss: 3.8581
+Iteration: 870; Percent complete: 87.0%; Average loss: 3.6666
+Iteration: 871; Percent complete: 87.1%; Average loss: 3.4929
+Iteration: 872; Percent complete: 87.2%; Average loss: 3.3006
+Iteration: 873; Percent complete: 87.3%; Average loss: 3.3368
+Iteration: 874; Percent complete: 87.4%; Average loss: 3.8141
+Iteration: 875; Percent complete: 87.5%; Average loss: 3.6173
+Iteration: 876; Percent complete: 87.6%; Average loss: 3.5970
+Iteration: 877; Percent complete: 87.7%; Average loss: 3.5450
+Iteration: 878; Percent complete: 87.8%; Average loss: 3.3669
+Iteration: 879; Percent complete: 87.9%; Average loss: 3.5643
+Iteration: 880; Percent complete: 88.0%; Average loss: 3.1451
+Iteration: 881; Percent complete: 88.1%; Average loss: 3.7305
+Iteration: 882; Percent complete: 88.2%; Average loss: 3.6524
+Iteration: 883; Percent complete: 88.3%; Average loss: 3.5586
+Iteration: 884; Percent complete: 88.4%; Average loss: 3.5960
+Iteration: 885; Percent complete: 88.5%; Average loss: 3.5084
+Iteration: 886; Percent complete: 88.6%; Average loss: 3.6194
+Iteration: 887; Percent complete: 88.7%; Average loss: 3.3856
+Iteration: 888; Percent complete: 88.8%; Average loss: 3.5006
+Iteration: 889; Percent complete: 88.9%; Average loss: 3.3827
+Iteration: 890; Percent complete: 89.0%; Average loss: 3.2416
+Iteration: 891; Percent complete: 89.1%; Average loss: 3.1870
+Iteration: 892; Percent complete: 89.2%; Average loss: 3.8679
+Iteration: 893; Percent complete: 89.3%; Average loss: 3.5939
+Iteration: 894; Percent complete: 89.4%; Average loss: 3.5239
+Iteration: 895; Percent complete: 89.5%; Average loss: 3.6485
+Iteration: 896; Percent complete: 89.6%; Average loss: 3.4690
+Iteration: 897; Percent complete: 89.7%; Average loss: 3.3761
+Iteration: 898; Percent complete: 89.8%; Average loss: 3.4284
+Iteration: 899; Percent complete: 89.9%; Average loss: 3.1698
+Iteration: 900; Percent complete: 90.0%; Average loss: 3.5964
+Iteration: 901; Percent complete: 90.1%; Average loss: 3.4420
+Iteration: 902; Percent complete: 90.2%; Average loss: 3.4231
+Iteration: 903; Percent complete: 90.3%; Average loss: 3.5940
+Iteration: 904; Percent complete: 90.4%; Average loss: 3.4862
+Iteration: 905; Percent complete: 90.5%; Average loss: 3.4355
+Iteration: 906; Percent complete: 90.6%; Average loss: 3.4696
+Iteration: 907; Percent complete: 90.7%; Average loss: 3.4155
+Iteration: 908; Percent complete: 90.8%; Average loss: 3.5568
+Iteration: 909; Percent complete: 90.9%; Average loss: 3.5416
+Iteration: 910; Percent complete: 91.0%; Average loss: 3.5533
+Iteration: 911; Percent complete: 91.1%; Average loss: 3.4300
+Iteration: 912; Percent complete: 91.2%; Average loss: 3.5937
+Iteration: 913; Percent complete: 91.3%; Average loss: 3.5169
+Iteration: 914; Percent complete: 91.4%; Average loss: 3.6191
+Iteration: 915; Percent complete: 91.5%; Average loss: 3.2708
+Iteration: 916; Percent complete: 91.6%; Average loss: 3.5288
+Iteration: 917; Percent complete: 91.7%; Average loss: 3.6505
+Iteration: 918; Percent complete: 91.8%; Average loss: 3.4792
+Iteration: 919; Percent complete: 91.9%; Average loss: 3.0818
+Iteration: 920; Percent complete: 92.0%; Average loss: 3.6403
+Iteration: 921; Percent complete: 92.1%; Average loss: 3.3641
+Iteration: 922; Percent complete: 92.2%; Average loss: 3.5005
+Iteration: 923; Percent complete: 92.3%; Average loss: 3.6512
+Iteration: 924; Percent complete: 92.4%; Average loss: 3.6840
+Iteration: 925; Percent complete: 92.5%; Average loss: 3.5438
+Iteration: 926; Percent complete: 92.6%; Average loss: 3.2931
+Iteration: 927; Percent complete: 92.7%; Average loss: 3.6332
+Iteration: 928; Percent complete: 92.8%; Average loss: 3.3919
+Iteration: 929; Percent complete: 92.9%; Average loss: 3.7360
+Iteration: 930; Percent complete: 93.0%; Average loss: 3.5057
+Iteration: 931; Percent complete: 93.1%; Average loss: 3.5184
+Iteration: 932; Percent complete: 93.2%; Average loss: 3.4555
+Iteration: 933; Percent complete: 93.3%; Average loss: 3.3600
+Iteration: 934; Percent complete: 93.4%; Average loss: 3.2237
+Iteration: 935; Percent complete: 93.5%; Average loss: 3.4981
+Iteration: 936; Percent complete: 93.6%; Average loss: 3.2487
+Iteration: 937; Percent complete: 93.7%; Average loss: 3.5012
+Iteration: 938; Percent complete: 93.8%; Average loss: 3.3056
+Iteration: 939; Percent complete: 93.9%; Average loss: 3.5810
+Iteration: 940; Percent complete: 94.0%; Average loss: 3.6362
+Iteration: 941; Percent complete: 94.1%; Average loss: 3.4450
+Iteration: 942; Percent complete: 94.2%; Average loss: 3.4435
+Iteration: 943; Percent complete: 94.3%; Average loss: 3.6852
+Iteration: 944; Percent complete: 94.4%; Average loss: 3.4906
+Iteration: 945; Percent complete: 94.5%; Average loss: 3.6138
+Iteration: 946; Percent complete: 94.6%; Average loss: 3.3767
+Iteration: 947; Percent complete: 94.7%; Average loss: 3.5980
+Iteration: 948; Percent complete: 94.8%; Average loss: 3.7375
+Iteration: 949; Percent complete: 94.9%; Average loss: 3.6222
+Iteration: 950; Percent complete: 95.0%; Average loss: 3.5187
+Iteration: 951; Percent complete: 95.1%; Average loss: 3.0401
+Iteration: 952; Percent complete: 95.2%; Average loss: 3.3294
+Iteration: 953; Percent complete: 95.3%; Average loss: 3.3466
+Iteration: 954; Percent complete: 95.4%; Average loss: 3.5263
+Iteration: 955; Percent complete: 95.5%; Average loss: 3.5468
+Iteration: 956; Percent complete: 95.6%; Average loss: 3.4229
+Iteration: 957; Percent complete: 95.7%; Average loss: 3.6399
+Iteration: 958; Percent complete: 95.8%; Average loss: 3.6019
+Iteration: 959; Percent complete: 95.9%; Average loss: 3.6024
+Iteration: 960; Percent complete: 96.0%; Average loss: 3.2869
+Iteration: 961; Percent complete: 96.1%; Average loss: 3.3428
+Iteration: 962; Percent complete: 96.2%; Average loss: 3.3447
+Iteration: 963; Percent complete: 96.3%; Average loss: 3.4997
+Iteration: 964; Percent complete: 96.4%; Average loss: 3.4760
+Iteration: 965; Percent complete: 96.5%; Average loss: 3.2730
+Iteration: 966; Percent complete: 96.6%; Average loss: 3.6426
+Iteration: 967; Percent complete: 96.7%; Average loss: 3.6061
+Iteration: 968; Percent complete: 96.8%; Average loss: 3.5181
+Iteration: 969; Percent complete: 96.9%; Average loss: 3.6858
+Iteration: 970; Percent complete: 97.0%; Average loss: 3.4363
+Iteration: 971; Percent complete: 97.1%; Average loss: 3.6556
+Iteration: 972; Percent complete: 97.2%; Average loss: 3.1471
+Iteration: 973; Percent complete: 97.3%; Average loss: 3.2975
+Iteration: 974; Percent complete: 97.4%; Average loss: 3.5819
+Iteration: 975; Percent complete: 97.5%; Average loss: 3.1734
+Iteration: 976; Percent complete: 97.6%; Average loss: 3.6163
+Iteration: 977; Percent complete: 97.7%; Average loss: 3.2371
+Iteration: 978; Percent complete: 97.8%; Average loss: 3.4374
+Iteration: 979; Percent complete: 97.9%; Average loss: 3.5130
+Iteration: 980; Percent complete: 98.0%; Average loss: 3.1881
+Iteration: 981; Percent complete: 98.1%; Average loss: 3.5100
+Iteration: 982; Percent complete: 98.2%; Average loss: 3.3868
+Iteration: 983; Percent complete: 98.3%; Average loss: 3.5596
+Iteration: 984; Percent complete: 98.4%; Average loss: 3.3385
+Iteration: 985; Percent complete: 98.5%; Average loss: 3.4363
+Iteration: 986; Percent complete: 98.6%; Average loss: 3.5013
+Iteration: 987; Percent complete: 98.7%; Average loss: 3.6829
+Iteration: 988; Percent complete: 98.8%; Average loss: 3.2579
+Iteration: 989; Percent complete: 98.9%; Average loss: 3.3899
+Iteration: 990; Percent complete: 99.0%; Average loss: 3.3571
+Iteration: 991; Percent complete: 99.1%; Average loss: 3.5110
+Iteration: 992; Percent complete: 99.2%; Average loss: 3.3999
+Iteration: 993; Percent complete: 99.3%; Average loss: 3.6177
+Iteration: 994; Percent complete: 99.4%; Average loss: 3.3804
+Iteration: 995; Percent complete: 99.5%; Average loss: 3.2889
+Iteration: 996; Percent complete: 99.6%; Average loss: 3.4945
+Iteration: 997; Percent complete: 99.7%; Average loss: 3.4022
+Iteration: 998; Percent complete: 99.8%; Average loss: 3.4819
+Iteration: 999; Percent complete: 99.9%; Average loss: 3.9566
+Iteration: 1000; Percent complete: 100.0%; Average loss: 3.2795
+Total Time of Execution: 3 Hrs
+> Hello
+Bot: hello . s a good . .
+> How are you?
+Bot: i m not . . . .
+> Is everything Okay?
+Bot: yes . s a little . .
+> Oh cool
+Bot: what ? is it ? ? ?
+> Who are you?
+Bot: i m not . . . .
+> Yor are bot
+Error: Encountered unknown word.
+> You are bot
+Error: Encountered unknown word.
+> what?
+Bot: you re a little . . .
+> Is everything Okay?
+Bot: yes . s a little . .
+> Super
+Bot: i m not going to . . .
+> Yeah, you are not going to..
+Bot: i m not . . . .
+> What?
+Bot: you re a little . . .
+> I am not little
+Bot: you re not a good . . .
+> I am good
+Bot: you re not a good . . .
+> Yes, I am
+Bot: you re not a good . . .
+> Why?
+Bot: i m not going to . . .
+> Leave it
+Bot: what ? is it ? ? ?
+> The topic which you are telling now
+Error: Encountered unknown word.
+> James
+Bot: i m not going to . . .
+> Camaron
+Error: Encountered unknown word.
+> Cameron
+Bot: i m not going to . . .
+> My name is VARUN
+Error: Encountered unknown word.
+> Hello
+Bot: hello . s a good . .
+> Okay
+Bot: i m not going to . . .
+> What?
+Bot: you re a little . . .
+>
