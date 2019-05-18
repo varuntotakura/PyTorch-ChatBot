@@ -114,3 +114,4 @@ dmypy.json
 .pyre/
 data/save/cb_model/cornell movie-dialogs corpus/2-2_500/300_checkpoint.tar
 data/save/cb_model/cornell movie-dialogs corpus/2-2_500/200_checkpoint.tar
+data/save/cb_model/cornell movie-dialogs corpus/2-2_500/100_checkpoint.tar
