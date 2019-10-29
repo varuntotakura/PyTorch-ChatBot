@@ -1,4 +1,3 @@
-#! python3.6
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -24,6 +23,14 @@ USE_CUDA = torch.cuda.is_available()
 device = torch.device("cuda" if USE_CUDA else "cpu")
 corpus_name = "cornell movie-dialogs corpus"
 corpus = os.path.join("data", corpus_name)
+
+def printLines(file, n=10):
+    with open(file, 'rb') as datafile:
+        lines = datafile.readlines()
+    for line in lines[:n]:
+        print(line)
+
+printLines(os.path.join(corpus, "movie_lines.txt"))
 
 # Splits each line of the file into a dictionary of fields
 def loadLines(fileName, fields):
@@ -86,15 +93,22 @@ MOVIE_LINES_FIELDS = ["lineID", "characterID", "movieID", "character", "text"]
 MOVIE_CONVERSATIONS_FIELDS = ["character1ID", "character2ID", "movieID", "utteranceIDs"]
 
 # Load lines and process conversations
+print("\nProcessing corpus...")
 lines = loadLines(os.path.join(corpus, "movie_lines.txt"), MOVIE_LINES_FIELDS)
+print("\nLoading conversations...")
 conversations = loadConversations(os.path.join(corpus, "movie_conversations.txt"),
                                   lines, MOVIE_CONVERSATIONS_FIELDS)
 
 # Write new csv file
+print("\nWriting newly formatted file...")
 with open(datafile, 'w', encoding='utf-8') as outputfile:
     writer = csv.writer(outputfile, delimiter=delimiter, lineterminator='\n')
     for pair in extractSentencePairs(conversations):
         writer.writerow(pair)
+
+# Print a sample of lines
+print("\nSample lines from file:")
+printLines(datafile)
 
 # Default word tokens
 PAD_token = 0  # Used for padding short sentences
@@ -135,6 +149,10 @@ class Voc:
             if v >= min_count:
                 keep_words.append(k)
 
+        print('keep_words {} / {} = {:.4f}'.format(
+            len(keep_words), len(self.word2index), len(keep_words) / len(self.word2index)
+        ))
+
         # Reinitialize dictionaries
         self.word2index = {}
         self.word2count = {}
@@ -164,6 +182,7 @@ def normalizeString(s):
 
 # Read query/response pairs and return a voc object
 def readVocs(datafile, corpus_name):
+    print("Reading lines...")
     # Read the file and split into lines
     lines = open(datafile, encoding='utf-8').\
         read().strip().split('\n')
@@ -183,17 +202,26 @@ def filterPairs(pairs):
 
 # Using the functions defined above, return a populated voc object and pairs list
 def loadPrepareData(corpus, corpus_name, datafile, save_dir):
+    print("Start preparing training data ...")
     voc, pairs = readVocs(datafile, corpus_name)
+    print("Read {!s} sentence pairs".format(len(pairs)))
     pairs = filterPairs(pairs)
+    print("Trimmed to {!s} sentence pairs".format(len(pairs)))
+    print("Counting words...")
     for pair in pairs:
         voc.addSentence(pair[0])
         voc.addSentence(pair[1])
+    print("Counted words:", voc.num_words)
     return voc, pairs
 
 
 # Load/Assemble voc and pairs
 save_dir = os.path.join("data", "save")
 voc, pairs = loadPrepareData(corpus, corpus_name, datafile, save_dir)
+# Print some pairs to validate
+print("\npairs:")
+for pair in pairs[:10]:
+    print(pair)
 
 MIN_COUNT = 3    # Minimum word count threshold for trimming
 
@@ -222,6 +250,7 @@ def trimRareWords(voc, pairs, MIN_COUNT):
         if keep_input and keep_output:
             keep_pairs.append(pair)
 
+    print("Trimmed from {} pairs to {}, {:.4f} of total".format(len(pairs), len(keep_pairs), len(keep_pairs) / len(pairs)))
     return keep_pairs
 
 
@@ -280,6 +309,12 @@ def batch2TrainData(voc, pair_batch):
 small_batch_size = 5
 batches = batch2TrainData(voc, [random.choice(pairs) for _ in range(small_batch_size)])
 input_variable, lengths, target_variable, mask, max_target_len = batches
+
+print("input_variable:", input_variable)
+print("lengths:", lengths)
+print("target_variable:", target_variable)
+print("mask:", mask)
+print("max_target_len:", max_target_len)
 
 class EncoderRNN(nn.Module):
     def __init__(self, hidden_size, embedding, n_layers=1, dropout=0):
@@ -595,7 +630,7 @@ batch_size = 64
 
 # Set checkpoint to load from; set to None if starting from scratch
 loadFilename = None
-checkpoint_iter = 2000
+checkpoint_iter = 1000
 loadFilename = os.path.join(save_dir, model_name, corpus_name,
                             '{}-{}_{}'.format(encoder_n_layers, decoder_n_layers, hidden_size),
                             '{}_checkpoint.tar'.format(checkpoint_iter))
@@ -614,6 +649,8 @@ if loadFilename:
     embedding_sd = checkpoint['embedding']
     voc.__dict__ = checkpoint['voc_dict']
 
+
+print('Building encoder and decoder ...')
 # Initialize word embeddings
 embedding = nn.Embedding(voc.num_words, hidden_size)
 if loadFilename:
@@ -634,7 +671,7 @@ clip = 50.0
 teacher_forcing_ratio = 1.0
 learning_rate = 0.0001
 decoder_learning_ratio = 5.0
-n_iteration = checkpoint_iter
+n_iteration = 1500
 print_every = 1
 save_every = 100
 
